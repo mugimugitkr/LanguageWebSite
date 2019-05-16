@@ -201,6 +201,7 @@ header {
   z-index: 100;
   filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.6));
   cursor: pointer;
+  display: none;
 }
 
 #over {
