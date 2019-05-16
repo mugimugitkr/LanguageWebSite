@@ -7,6 +7,26 @@ $(function() {
   })
 
 
+  // 各セクションのアイコンがクリックされた
+  $('.section-content').click(function() {
+    // bodyにdiv#overを追加
+    $('body').append($('<div id="over">'));
+
+    // div#overにdiv.lightboxを追加
+    $('#over').append($('<div class="lightbox">'));
+
+    // div.lightboxの持つiを取得し、コピーを作る
+    let icon = $(this).find('i').clone();
+
+    $('.lightbox').append(icon);
+
+    $('#over').click(function() {
+      $('#over').fadeOut(function() {
+        $('#over').remove();
+      })
+    })
+  })
+
 
   // 画面がスクロールされたら
   $(window).scroll(function() {
