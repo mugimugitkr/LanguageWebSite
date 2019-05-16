@@ -43,4 +43,15 @@ $(function() {
       $('.css').animate({right: 0}, 1000);
     }
 
+
+    // jsの処理
+    let jsTop = $('.js').offset().top;
+
+    if (scrollTopValue > jsTop) {
+      $('.js .section-content').fadeIn();
+    } else {
+      $('.js .section-content').fadeOut();
+    }
+  })
+
 })
