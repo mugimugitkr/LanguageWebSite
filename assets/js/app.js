@@ -23,6 +23,24 @@ $(function() {
       // 鳥アイコンを非表示
       $('.bird').fadeOut();
     }
-  })
+
+
+    // htmlの処理
+    // htmlの表示位置（上）の取得
+    let htmlTop = $('.html').offset().top;
+
+    if (scrollTopValue > htmlTop - 150) {
+      // htmlが表示されそうになったら
+      $('.html').animate({left: 0}, 1000);
+    }
+
+    // cssの処理
+    // cssの表示位置（上）の取得
+    let cssTop = $('.css').offset().top;
+
+    if (scrollTopValue > cssTop - 150) {
+      // cssが表示されそうになったら
+      $('.css').animate({right: 0}, 1000);
+    }
 
 })
